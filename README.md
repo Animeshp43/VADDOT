@@ -1,4 +1,4 @@
-# VADDOT
+# VADDOT- Vocal Analysis to Detect Diseases Of Throat
 # Purpose
 Pharyngeal diseases, also known as throat diseases, are rampant- owing to pollution, allergies, and pathogens. The current practice to detect such diseases, i.e., the Throat Culture or the Strep Test, is invasive and depends entirely on the bacterial growth from the swab samples, which is a time taking process. We aim to develop a patient-friendly mechanism for easy and efficient detection of throat diseases, reducing the time taken for diagnosis.
 
