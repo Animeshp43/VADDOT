@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    nav {
+  background-color: #333; 
+}
+
+nav ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  justify-content: center; 
+}
+
+nav li {
+  margin: 0 10px; 
+}
+
+nav a {
+  display: block;
+  padding: 10px 15px; 
+  color: #fff; 
+  text-decoration: none; 
+  font-weight: bold; 
+  transition: all 0.3s ease; 
+}
+
+nav a:hover {
+  background-color: #fff; 
+  color: #333; 
+}
+
+.progress-container {
+  height: 4px;
+  background-color: #f1f1f1;
+}
+
+
+.progress-bar {
+  height: 100%;
+  background-color: #4CAF50;
+  width: 0%;
+  transition: width 0.5s ease-in-out;
+}
+
+
+body {
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: #4CAF50;
+  z-index: 9999;
+  transition: width 0.5s ease-in-out;
+}
+
+body.loading::before {
+  width: 100%;
+}
+
+body.loading .progress-bar {
+  width: 100%;
+}
+.voice-button {
+  display: inline-block;
+  border: none;
+  background-color: #fff;
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.voice-button:hover {
+  background-color: #f1f1f1;
+}
+
+.voice-button:focus {
+  outline: none;
+}
+
+.voice-button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+.voice-button:before {
+  content: '\f130';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.voice-button.is-recording:before {
+  content: '\f131';
+  color: red;
+}
+
+
+</style>
+<body>
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+
+      <button class="voice-button">Speak now</button>
+</body>
+</html>
