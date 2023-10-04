@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parkinson's Disease Detection</title>
+</head>
+<body>
+    <h1>Parkinson's Disease Detection</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="voice">Upload Voice Recording:</label>
+        <input type="file" name="voice" accept=".wav, .mp3">
+        <button type="submit">Detect Parkinson's</button>
+    </form>
+    {% if result %}
+    <h2>Result:</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
